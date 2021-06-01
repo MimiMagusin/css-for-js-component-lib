@@ -1,6 +1,12 @@
 // import styled from "styled-components";
 
-import { BaseBtn, FilledButton, OutlinedButton, SIZES } from "./styles";
+import {
+  BaseBtn,
+  FilledButton,
+  GhostButton,
+  OutlinedButton,
+  SIZES,
+} from "./styles";
 
 type ButtonProps = {
   variant?: "fill" | "outline" | "ghost";
@@ -13,6 +19,9 @@ const Button: React.FC<ButtonProps> = ({ variant, size, children }) => {
 
   if (variant === "outline")
     return <OutlinedButton style={SIZES[size]}>{children}</OutlinedButton>;
+
+  if (variant === "ghost")
+    return <GhostButton style={SIZES[size]}>{children}</GhostButton>;
 
   return <BaseBtn style={SIZES[size]}>{children}</BaseBtn>;
 };

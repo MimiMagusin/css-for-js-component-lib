@@ -13,21 +13,18 @@ export const SIZES: SizesType = {
     '--fontSize': `${16 /16}rem`,
     '--width': '93px',
     '--height': '35px',
-    '--padding': '8px 16px'
   },
   medium: {
     '--borderRadius': '2px',
     '--fontSize': `${18/16}rem`,
     '--width': '117px',
     '--height': '53px',
-    '--padding': '16px 24px'
   },
   large: {
     '--borderRadius': '4px',
     '--fontSize': `${18/16}rem`,
     '--width': '152px',
     '--height': '65px',
-    '--padding': '20px 36px'
   }
 }
 
@@ -39,7 +36,7 @@ export const BaseBtn = styled.button`
   height: var(--height);
   padding: var(--padding);
   border-radius: var(--borderRadius);
-  border: none;
+  border: 2px solid transparent;
 `;
 
 export const FilledButton = styled(BaseBtn)`
@@ -59,6 +56,28 @@ export const FilledButton = styled(BaseBtn)`
 export const OutlinedButton = styled(BaseBtn)`
   background: ${COLORS.white};
   color: ${COLORS.primary};
-  border: 1px solid ${COLORS.primary};
+  border: 2px solid ${COLORS.primary};
+
+  &:hover {
+    background: ${COLORS.offwhite}
+  }
+
+  &:focus {
+    outline: 2px  solid ${COLORS.primary};
+    outline-offset: -4px;
+  }
 `;
 
+export const GhostButton = styled(BaseBtn)`
+  background: transparent;
+  color: ${COLORS.gray};
+
+  &:hover {
+    background: ${COLORS.transparentGray15}
+  }
+
+  &:focus {
+    outline: none;
+    border: 2px  solid ${COLORS.transparentGray75};
+  }
+`;
