@@ -11,7 +11,6 @@ const ButtonTable = () => {
         <th>Fill</th>
         <th>Outline</th>
         <th>Ghost</th>
-        <th>Default</th>
       </tr>
       <tr>
         <td>Small</td>
@@ -21,7 +20,7 @@ const ButtonTable = () => {
           </Button>
         </td>
         <td>
-          <Button size="small" variant="outline">
+          <Button size="small" variant="outline" href={"lalala"}>
             Button
           </Button>
         </td>
@@ -29,9 +28,6 @@ const ButtonTable = () => {
           <Button size="small" variant="ghost">
             Button
           </Button>
-        </td>
-        <td>
-          <Button size="small">Button</Button>
         </td>
       </tr>
       <tr>
@@ -51,9 +47,6 @@ const ButtonTable = () => {
             Button
           </Button>
         </td>
-        <td>
-          <Button size="medium">Button</Button>
-        </td>
       </tr>
       <tr>
         <td>Large</td>
@@ -71,9 +64,6 @@ const ButtonTable = () => {
           <Button size="large" variant="ghost">
             Button
           </Button>
-        </td>
-        <td>
-          <Button size="large">Button</Button>
         </td>
       </tr>
     </Table>

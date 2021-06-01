@@ -28,7 +28,7 @@ export const SIZES: SizesType = {
   }
 }
 
-export const BaseBtn = styled.button`
+const BaseBtn = styled.button`
   font-family: 'Roboto', sans-serif;
   font-size: var(--fontSize);
   text-transform: uppercase;
@@ -37,6 +37,13 @@ export const BaseBtn = styled.button`
   padding: var(--padding);
   border-radius: var(--borderRadius);
   border: 2px solid transparent;
+  /* In case it is used as a link */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin: auto;
 `;
 
 export const FilledButton = styled(BaseBtn)`
